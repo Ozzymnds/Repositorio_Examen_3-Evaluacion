@@ -5,6 +5,10 @@ import java.io.FileNotFoundException;
 import java.util.Scanner;
 
 public class Main {
+	/**
+	 * Pre: --- Post: Método utilizado para leer el fichero .txt
+	 * 
+	 */
 	public static void lecturaFichero(String fichero, String letra, String palabra) {
 		File file = new File(fichero);
 		try {
@@ -13,7 +17,7 @@ public class Main {
 				String linea = sc.nextLine();
 				String[] lineaSep = linea.split(" "); // Método de separación dentro del fichero
 				for (int i = 0; i < lineaSep.length; i++) {
-					if(palabra.contains(letra)) {
+					if (palabra.contains(letra)) {
 						System.out.println(palabra);
 					}
 				}

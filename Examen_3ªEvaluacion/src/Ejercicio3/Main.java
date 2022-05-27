@@ -3,9 +3,9 @@ package Ejercicio3;
 public class Main {
 	/**
 	 * Pre: --- Post: Nos piden que, teniendo una Simple Linked List con nodos de
-	 * tipo int, creemos un mÈtodo llamado "eliminarMayor()", el cual consistir· en
-	 * eliminar el nodo que tenga el n˙mero mayor, es decir, si est·n 23, 12 y 40 se
-	 * eliminar· el 40 por ser el mayor.
+	 * tipo int, creemos un m√©todo llamado "eliminarMayor()", el cual consistir√° en
+	 * eliminar el nodo que tenga el n√∫mero mayor, es decir, si est√°n 23, 12 y 40 se
+	 * eliminar√° el 40 por ser el mayor.
 	 * 
 	 */
 	public static void main(String[] args) {

@@ -3,11 +3,11 @@ package Ejercicio3;
 import java.util.Scanner;
 
 /**
- * Pre: --- Post: Clase "constructor" con la finalidad de crear los métodos
+ * Pre: --- Post: Clase "constructor" con la finalidad de crear los mÃ©todos
  * necesarios para poder alterar la lista simple. Consiste en varios "getters" y
- * "setters", unos métodos constructores, dos métodos para añadir nodos, otros
- * dos para eliminar, uno para seleccionar un nodo y, por último, un método para
- * mostrar por pantalla la lista en sí.
+ * "setters", unos mÃ©todos constructores, dos mÃ©todos para aï¿½adir nodos, otros
+ * dos para eliminar, uno para seleccionar un nodo y, por Ãºltimo, un mÃ©todo para
+ * mostrar por pantalla la lista en sÃ­.
  * 
  */
 public class SimpleLinkedList {
@@ -41,7 +41,7 @@ public class SimpleLinkedList {
 	}
 
 	/**
-	 * Pre: --- Post: Método para añadir un nodo en la primera posición solamente.
+	 * Pre: --- Post: MÃ©todo para aÃ±adir un nodo en la primera posiciÃ³n solamente.
 	 */
 	public boolean add(Node node) {
 		try {
@@ -63,8 +63,8 @@ public class SimpleLinkedList {
 	}
 
 	/**
-	 * Pre: --- Post: Método con la misma finalidad que el anterior, pero con la
-	 * diferencia de que aquí elegimos la posición donde añadir el nodo
+	 * Pre: --- Post: MÃ©todo con la misma finalidad que el anterior, pero con la
+	 * diferencia de que aquÃ­ elegimos la posiciÃ³n donde aÃ±adir el nodo
 	 */
 	public boolean add(int position, Node node) {
 		try {
@@ -90,8 +90,8 @@ public class SimpleLinkedList {
 	}
 
 	/**
-	 * Pre: --- Post: Método usado para eliminar un nodo de la lista en base a su
-	 * posición en la misma.
+	 * Pre: --- Post: MÃ©todo usado para eliminar un nodo de la lista en base a su
+	 * posiciÃ³n en la misma.
 	 */
 	public boolean delete(int position) {
 		try {
@@ -120,8 +120,8 @@ public class SimpleLinkedList {
 	}
 
 	/**
-	 * Pre: --- Post: Método booleano para saber qué número de la lista es el mayor.
-	 * Lo usaremos en el siguiente método para así poder eliminar el nodo que toque.
+	 * Pre: --- Post: MÃ©todo para saber quÃ© nÃºmero de la lista es el mayor.
+	 * Lo usaremos en el siguiente mÃ©todo para asÃ­ poder eliminar el nodo que toque.
 	 * 
 	 */
 	public static int esMayor(Node node) {
@@ -130,22 +130,22 @@ public class SimpleLinkedList {
 		n2 = 40;
 		n3 = 32;
 		if (n1 > n2) {
-            if (n1 > n3) {
-                System.out.println("El mayor es: " + n1);                                             
-            } else {
-                System.out.println("el mayor es: " + n3);     
-            }
-        } else if (n2 > n3) {
-            System.out.println("el mayor es: " + n2);
-        } else {
-            System.out.println("el mayor es: " + n3);
-        }
+			if (n1 > n3) {
+				System.out.println("El mayor es: " + n1);
+			} else {
+				System.out.println("el mayor es: " + n3);
+			}
+		} else if (n2 > n3) {
+			System.out.println("el mayor es: " + n2);
+		} else {
+			System.out.println("el mayor es: " + n3);
+		}
 		return n2;
 	}
 
 	/**
-	 * Pre: --- Post: Usando el método anterior sabremos qué nodo debemos eliminar,
-	 * en este caso aquel cuyo número sea mayor que los de los demás.
+	 * Pre: --- Post: Usando el mÃ©todo anterior sabremos quÃ© nodo debemos eliminar,
+	 * en este caso aquel cuyo nÃºmero sea mayor que los de los demÃ¡s.
 	 * 
 	 */
 	public boolean eliminarMayor() {
@@ -154,7 +154,7 @@ public class SimpleLinkedList {
 			if (size == 0) {
 				Node p = first;
 				first = p.getNext();
-			} else if(size != 0) {
+			} else if (size != 0) {
 				int p = esMayor();
 			}
 			size--;
@@ -166,7 +166,7 @@ public class SimpleLinkedList {
 	}
 
 	/**
-	 * Pre: --- Post: Método usado para seleccionar un nodo en base a su posición en
+	 * Pre: --- Post: MÃ©todo usado para seleccionar un nodo en base a su posiciÃ³n en
 	 * la lista.
 	 */
 	public Node get(int position) {
@@ -188,7 +188,7 @@ public class SimpleLinkedList {
 	}
 
 	/**
-	 * Pre: --- Post: Método para mostrar por pantalla la Simple Linked List
+	 * Pre: --- Post: MÃ©todo para mostrar por pantalla la Simple Linked List
 	 */
 	public void show() {
 		Node p = first;
