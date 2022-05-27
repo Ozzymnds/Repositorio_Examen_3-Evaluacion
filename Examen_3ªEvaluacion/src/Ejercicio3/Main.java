@@ -16,5 +16,9 @@ public class Main {
 		l.add(n1);
 		l.add(n2);
 		l.add(n3);
+		SimpleLinkedList.esMayor(n2);
+		l.show();
+		System.out.println("----------------");
+		l.show();
 	}
 }

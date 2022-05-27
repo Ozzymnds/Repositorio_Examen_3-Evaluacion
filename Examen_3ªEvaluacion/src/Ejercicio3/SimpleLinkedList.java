@@ -1,5 +1,7 @@
 package Ejercicio3;
 
+import java.util.Scanner;
+
 /**
  * Pre: --- Post: Clase "constructor" con la finalidad de crear los métodos
  * necesarios para poder alterar la lista simple. Consiste en varios "getters" y
@@ -117,12 +119,46 @@ public class SimpleLinkedList {
 		}
 	}
 
-	public boolean eliminarMayor(int position, Node node) {
+	/**
+	 * Pre: --- Post: Método booleano para saber qué número de la lista es el mayor.
+	 * Lo usaremos en el siguiente método para así poder eliminar el nodo que toque.
+	 * 
+	 */
+	public static int esMayor(Node node) {
+		int n1, n2, n3;
+		n1 = 20;
+		n2 = 40;
+		n3 = 32;
+		if (n1 > n2) {
+            if (n1 > n3) {
+                System.out.println("El mayor es: " + n1);                                             
+            } else {
+                System.out.println("el mayor es: " + n3);     
+            }
+        } else if (n2 > n3) {
+            System.out.println("el mayor es: " + n2);
+        } else {
+            System.out.println("el mayor es: " + n3);
+        }
+		return n2;
+	}
+
+	/**
+	 * Pre: --- Post: Usando el método anterior sabremos qué nodo debemos eliminar,
+	 * en este caso aquel cuyo número sea mayor que los de los demás.
+	 * 
+	 */
+	public boolean eliminarMayor() {
+		int node = 0;
 		try {
-			if (position == 0) {
+			if (size == 0) {
 				Node p = first;
 				first = p.getNext();
+			} else if(size != 0) {
+				int p = esMayor();
 			}
+			size--;
+			return true;
 		} catch (Exception e) {
 			System.out.println(e.toString());
 			return false;
