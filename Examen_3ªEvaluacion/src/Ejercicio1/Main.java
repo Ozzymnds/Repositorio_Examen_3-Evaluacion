@@ -5,15 +5,17 @@ import java.io.FileNotFoundException;
 import java.util.Scanner;
 
 public class Main {
-	public static void lecturaFichero(String fichero, String letra) {
+	public static void lecturaFichero(String fichero, String letra, String palabra) {
 		File file = new File(fichero);
 		try {
 			Scanner sc = new Scanner(file);
 			while (sc.hasNextLine()) {
 				String linea = sc.nextLine();
-				String[] lineaSep = linea.split(" "); //Método de separación dentro del fichero
-				for(int i = 0; i < lineaSep.length; i++) {
-					
+				String[] lineaSep = linea.split(" "); // Método de separación dentro del fichero
+				for (int i = 0; i < lineaSep.length; i++) {
+					if(palabra.contains(letra)) {
+						System.out.println(palabra);
+					}
 				}
 			}
 		} catch (FileNotFoundException e) {
@@ -33,6 +35,7 @@ public class Main {
 		System.out.println(
 				"Escribe una letra para buscar las palabras que o bien empiezan o bien acaban por dicha letra.");
 		String letra = sc.nextLine();
-		lecturaFichero(fichero, letra);
+		String palabra = "";
+		lecturaFichero(fichero, letra, palabra);
 	}
 }
