@@ -1,5 +1,13 @@
 package Ejercicio3;
 
+/**
+ * Pre: --- Post: Clase "constructor" con la finalidad de crear los métodos
+ * necesarios para poder alterar la lista simple. Consiste en varios "getters" y
+ * "setters", unos métodos constructores, dos métodos para añadir nodos, otros
+ * dos para eliminar, uno para seleccionar un nodo y, por último, un método para
+ * mostrar por pantalla la lista en sí.
+ * 
+ */
 public class SimpleLinkedList {
 	private Node first;
 	private int size;
@@ -30,8 +38,8 @@ public class SimpleLinkedList {
 		this.size = size;
 	}
 
-	/*
-	 * Método para añadir un nodo en la primera posición solamente.
+	/**
+	 * Pre: --- Post: Método para añadir un nodo en la primera posición solamente.
 	 */
 	public boolean add(Node node) {
 		try {
@@ -52,9 +60,9 @@ public class SimpleLinkedList {
 		}
 	}
 
-	/*
-	 * Método con la misma finalidad que el anterior, pero con la diferencia de que
-	 * aquí elegimos la posición donde añadir el nodo
+	/**
+	 * Pre: --- Post: Método con la misma finalidad que el anterior, pero con la
+	 * diferencia de que aquí elegimos la posición donde añadir el nodo
 	 */
 	public boolean add(int position, Node node) {
 		try {
@@ -79,9 +87,9 @@ public class SimpleLinkedList {
 		}
 	}
 
-	/*
-	 * Método usado para eliminar un nodo de la lista en base a su posición en la
-	 * misma.
+	/**
+	 * Pre: --- Post: Método usado para eliminar un nodo de la lista en base a su
+	 * posición en la misma.
 	 */
 	public boolean delete(int position) {
 		try {
@@ -109,17 +117,21 @@ public class SimpleLinkedList {
 		}
 	}
 
-	public boolean eliminarMayor() {
+	public boolean eliminarMayor(int position, Node node) {
 		try {
-			
+			if (position == 0) {
+				Node p = first;
+				first = p.getNext();
+			}
 		} catch (Exception e) {
 			System.out.println(e.toString());
 			return false;
 		}
 	}
 
-	/*
-	 * Método usado para seleccionar un nodo en base a su posición en la lista.
+	/**
+	 * Pre: --- Post: Método usado para seleccionar un nodo en base a su posición en
+	 * la lista.
 	 */
 	public Node get(int position) {
 		try {
@@ -139,8 +151,8 @@ public class SimpleLinkedList {
 		}
 	}
 
-	/*
-	 * Método para mostrar por pantalla la Simple Linked List
+	/**
+	 * Pre: --- Post: Método para mostrar por pantalla la Simple Linked List
 	 */
 	public void show() {
 		Node p = first;

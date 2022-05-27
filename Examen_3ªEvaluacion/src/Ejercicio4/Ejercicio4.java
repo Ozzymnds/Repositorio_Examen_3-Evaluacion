@@ -11,8 +11,7 @@ public class Ejercicio4 {
 	}
 
 	/**
-	 * Pre: --- 
-	 * Post: Nos piden un programa para calcular de manera recursiva la
+	 * Pre: --- Post: Nos piden un programa para calcular de manera recursiva la
 	 * tabla de multiplicar de "n" contando sólo con los números pares, es decir,
 	 * que sólo se multiplicará por 2, 4, 6, 8, etc.
 	 */
